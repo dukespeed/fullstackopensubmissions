@@ -1,0 +1,20 @@
+title ExampleAppDiagram
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note
+
+note over browser:
+browser starts executing js-code
+to send the form data to the 
+server.
+end note
+
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.js
+
+server-->browser: [{ content: "Testing123", date: "2021-08-06" }, ...]
+
+note over browser:
+brows executes event handler
+renders the new data
+end note
